@@ -223,12 +223,14 @@ const TableContainer = ({ logoAnimDone }) => {
             peopleData && <Table data={peopleData} />
           )}
         </TableContainerDiv>
-        <PaginationComponents
-          next={next}
-          previous={previous}
-          setCurrent={setCurrent}
-          count={count}
-        />
+        {!isLoading && !isError && (
+          <PaginationComponents
+            next={next}
+            previous={previous}
+            setCurrent={setCurrent}
+            count={count}
+          />
+        )}
       </>
     )
   );

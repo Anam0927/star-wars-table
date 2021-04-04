@@ -37,10 +37,7 @@ const Input = styled.input`
 const FilterInput = ({ filter, setFilter }) => {
   const [input, setInput] = useState(filter);
   useEffect(() => {
-    const timeOutId = setTimeout(() => {
-      setFilter(input);
-      console.log('filter changed');
-    }, 500);
+    const timeOutId = setTimeout(() => setFilter(input), 500);
     return () => clearTimeout(timeOutId);
   }, [input, setFilter]);
   return (

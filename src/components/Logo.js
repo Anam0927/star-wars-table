@@ -24,6 +24,9 @@ const LogoDiv = styled.h1`
   opacity: 0;
 
   animation: logo-anim 3s ease-in forwards;
+  @media (max-width: 768px) {
+    animation: logo-anim-mobile 3s ease-in forwards;
+  }
 
   svg {
     width: 100%;
@@ -46,6 +49,28 @@ const LogoDiv = styled.h1`
 
     100% {
       width: 15%;
+      top: 2rem;
+      opacity: 1;
+      transform: translate(-50%, 0) translatez(0px) rotatex(0deg);
+    }
+  }
+
+  @keyframes logo-anim-mobile {
+    0% {
+      width: 50%;
+      opacity: 0;
+      top: 100%;
+      transform: translate(-50%, -100%) rotatex(80deg);
+    }
+
+    60% {
+      opacity: 1;
+      top: 100%;
+      transform: translate(-50%, -100%) translatez(-350px) rotatex(80deg);
+    }
+
+    100% {
+      width: 25%;
       top: 2rem;
       opacity: 1;
       transform: translate(-50%, 0) translatez(0px) rotatex(0deg);

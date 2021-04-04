@@ -51,9 +51,9 @@ export const COLUMNS = [
         accessor: 'films',
         Cell: (row) => {
           return (
-            <ul class='sub-row'>
-              {row.value.map((value) => (
-                <li>{value}</li>
+            <ul className='sub-row'>
+              {row.value.map((value, i) => (
+                <li key={i}>{value}</li>
               ))}
             </ul>
           );
@@ -73,9 +73,9 @@ export const COLUMNS = [
         accessor: 'starships',
         Cell: (row) => {
           return Array.isArray(row.value) ? (
-            <ul class='sub-row'>
-              {row.value.map((value) => (
-                <li>{value}</li>
+            <ul className='sub-row'>
+              {row.value.map((value, i) => (
+                <li key={i}>{value}</li>
               ))}
             </ul>
           ) : (
@@ -88,9 +88,9 @@ export const COLUMNS = [
         accessor: 'vehicles',
         Cell: (row) => {
           return Array.isArray(row.value) ? (
-            <ul class='sub-row'>
-              {row.value.map((value) => (
-                <li>{value}</li>
+            <ul className='sub-row'>
+              {row.value.map((value, i) => (
+                <li key={i}>{value}</li>
               ))}
             </ul>
           ) : (

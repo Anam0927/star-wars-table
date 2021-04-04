@@ -15,6 +15,8 @@ const TableDiv = styled.table`
     box-shadow: 0 0 10px ${(props) => props.theme.red};
 
     animation: color-change 20s ease infinite;
+    text-shadow: 0 0 0.25em ${(props) => props.theme.red},
+      0 0 0.5em ${(props) => props.theme.red};
   }
 
   thead tr:first-of-type th {

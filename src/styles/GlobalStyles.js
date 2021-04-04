@@ -16,6 +16,8 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x:hidden;
   }
 
+  ::-webkit-appearance: none;
+
 
   body {
     background-color: ${(props) => props.theme.black};

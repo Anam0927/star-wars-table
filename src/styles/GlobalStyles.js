@@ -16,8 +16,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x:hidden;
   }
 
-  ::-webkit-appearance: none;
-
 
   body {
     background-color: ${(props) => props.theme.black};
@@ -27,20 +25,21 @@ export const GlobalStyles = createGlobalStyle`
     min-height:100vh;
   }
 
-  body::-webkit-scrollbar{
+  ::-webkit-scrollbar{
     width:8px;
+    appearance: none;
   }
-  body::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     background: transparent;
   }
-  body::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background-color: transparent;
     border-radius: 4px;
     border: none;
     transition: 0.3s;
     box-shadow: inset 0 0 6px ${(props) => props.theme.yellow};
   }
-  body {
+  html,body {
     scrollbar-width: thin;
     scrollbar-color: ${(props) => props.theme.yellow} transparent;
   }

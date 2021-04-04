@@ -1,3 +1,8 @@
+/********************************************************
+ *: REFERENCE:
+ *-- https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+ *******************************************************/
+
 import React, { useRef, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 
@@ -7,6 +12,7 @@ const Canvas = styled.canvas`
   top: 0;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   z-index: -1;
 `;
 
@@ -17,8 +23,8 @@ const StarField = () => {
   const h = useRef(null);
 
   const setCanvasExtents = useCallback(() => {
-    w.current = document.body.clientWidth;
-    h.current = document.body.clientHeight;
+    w.current = Math.max(document.body.clientWidth, window.innerWidth);
+    h.current = Math.max(document.body.clientHeight, window.innerHeight);
     canvasRef.current.width = w.current;
     canvasRef.current.height = h.current;
   }, []);

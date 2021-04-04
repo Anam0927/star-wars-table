@@ -8,6 +8,7 @@ const PerspectiveDiv = styled.div`
   top: 0;
   left: 0;
   perspective: 100px;
+  z-index: -1;
 `;
 
 const LogoDiv = styled.h1`
@@ -26,7 +27,7 @@ const LogoDiv = styled.h1`
 
   svg {
     width: 100%;
-    fill: #ffe81f;
+    fill: ${(props) => props.theme.yellow};
   }
 
   @keyframes logo-anim {
